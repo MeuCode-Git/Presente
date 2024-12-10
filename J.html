@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livros para Reflexão</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 2em;
+            color: #333;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px;
+            gap: 20px;
+        }
+        .card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .card h2 {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+        .card p {
+            font-size: 0.9em;
+            color: #555;
+        }
+        .card button {
+            background: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9em;
+            margin-top: 10px;
+        }
+        .card button:hover {
+            background: #0056b3;
+        }
+        .legend {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 1.2em;
+            font-style: italic;
+            color: #333;
+        }
+
+        /* Tela inicial com o presente */
+        .initial-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            transition: opacity 0.5s ease;
+        }
+
+        .gift-box {
+            width: 100vh;
+            height: 100vh;
+            background-color: rgb(255, 99, 71);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 8px;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .gift-box img {
+    width: 350px;
+    height: 350px;
+}
+
+        .gift-box.open {
+            animation: openGift 2s forwards;
+        }
+
+        @keyframes openGift {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            25% {
+                transform: scale(1.1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+            100% {
+                transform: scale(0);
+                opacity: 0;
+            }
+        }
+
+        .main-content {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Tela inicial com o presente -->
+    <div class="initial-screen">
+        <div class="gift-box" onclick="openGift()">
+            <img src="Presente.png" alt="Presente">
+        </div>
+    </div>
+
+    <!-- Conteúdo principal -->
+    <div class="main-content">
+        <h1>Livros para Reflexão</h1>
+        <div class="container">
+            <div class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0JZsQvw4lgk1KtnESySA0-ZM_L_KCGQ7QQYZR4whDobSUPsoeK_DoROSr&s=10" alt="Como Fazer Amigos e Influenciar Pessoas">
+                <h2>Como Fazer Amigos e Influenciar Pessoas</h2>
+                <p>Clássico sobre habilidades sociais e empatia.</p>
+                <button onclick="window.open('https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://alunos.impulsaoprofissional.com.br/wp-content/uploads/Como-Fazer-Amigos-e-Influenciar-Pessoas-Dale-Carnegie.pdf&ved=2ahUKEwiZyMLzr52KAxV4ArkGHQauECAQFnoECB0QAQ&usg=AOvVaw3x8gZLWkYipSCduhQrNHGS', '_blank')">Ler Livro</button>
+            </div>
+            <div class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTe82s6L4kpqY8pXc0wUmHsr4hWCV1ZbosP_54qD7Yna_8JjwaCU4rxceM&s=10" alt="A Sutil Arte de Ligar o F*da-se">
+                <h2>A Sutil Arte de Ligar o F*da-se</h2>
+                <p>Sobre prioridades e evitar comportamentos tóxicos.</p>
+                <button onclick="window.open('https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://alunos.impulsaoprofissional.com.br/wp-content/uploads/Como-Fazer-Amigos-e-Influenciar-Pessoas-Dale-Carnegie.pdf&ved=2ahUKEwiZyMLzr52KAxV4ArkGHQauECAQFnoECB0QAQ&usg=AOvVaw3x8gZLWkYipSCduhQrNHGS', '_blank')">Ler Livro</button>
+            </div>
+            <div class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRY0y3sHWq53lCpmM0jSF9cJXPSU2mU-hccl-mbIqn8OrD1nqYkuQzBxpU&s=10" alt="Inteligência Emocional">
+                <h2>Inteligência Emocional</h2>
+                <p>Gerencie emoções e melhore relacionamentos.</p>
+                <button onclick="window.open('https://edisciplinas.usp.br/pluginfile.php/8074335/mod_resource/content/3/Inteligencia%20Social%20-%20Daniel%20Goleman.pdf', '_blank')">Ler Livro</button>
+            </div>
+            <div class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbBjcTmWlFKORWAqWj_V6VbcCnKIXVm9d2DsC5Bxf1-WwQhKiHysqV3GE&s=10" alt="Por Que Fazemos o Que Fazemos?">
+                <h2>Por Que Fazemos o Que Fazemos?</h2>
+                <p>Um olhar sobre atitudes e escolhas pessoais.</p>
+                <button onclick="window.open('https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://static.fnac-static.com/multimedia/PT/pdf/9789897771217.pdf&ved=2ahUKEwip1qezsJ2KAxUwPbkGHWcjLwwQFnoECBwQAQ&usg=AOvVaw1WBHrDXNYZU7f_PrspAxzl', '_blank')">Ler Livro</button>
+            </div>
+            <div class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxU2ai2qcB9iGDPugdpushZcxz1O0bnt94ljmQwKXnrlwpVuw--uYbZ6S7&s=10" alt="Gente Tóxica">
+                <h2>Gente Tóxica</h2>
+                <p>Identifique e lide com pessoas difíceis.</p>
+                <button onclick="window.open('https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://coachingadistancia.com/wp-content/uploads/2020/09/61-252-Gente-t%25C3%25B3xica-Bernardo-Stamateas.pdf&ved=2ahUKEwiatZalsZ2KAxX0JLkGHYhIIEEQFnoECBQQAQ&usg=AOvVaw0NNgoyh-sN1CKu8y1irhwc', '_blank')">Ler Livro</button>
+            </div>
+        </div>
+
+        <div class="legend">
+            <p><strong>Núbia</strong> será surpreendida com um presente especial no amigo secreto. Dizem que, quando a Núbia abre seu presente, ela faz um desejo tão forte que é capaz de realizar sonhos e transformar a vida de quem a cerca. Um presente simbólico de amor e gratidão!</p>
+        </div>
+    </div>
+
+    <script>
+        function openGift() {
+            document.querySelector('.initial-screen').style.opacity = '0';
+            setTimeout(function() {
+                document.querySelector('.initial-screen').style.display = 'none';
+                document.querySelector('.main-content').style.display = 'block';
+            }, 500);  // Tempo para o fade out da tela inicial
+        }
+    </script>
+
+</body>
+</html>
